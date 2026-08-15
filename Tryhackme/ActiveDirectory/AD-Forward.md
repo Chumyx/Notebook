@@ -66,7 +66,7 @@ Connect using xfreerdp:
 xfreerdp v:10.114.135.78 /u:j.smith /p:JSmith@IT2024 /dynamic-resolution
 ```
 
-![RDP Login](assets/Forward1.png)
+![RDP Login](../assets/Forward1.png)
 
 
 # Discovering a KeePass Database
@@ -77,7 +77,7 @@ Opening the database reveals that it **does not require a master password**, all
 
 Inside the database is an entry belonging to another employee.
 
-![KeePass Credentials](assets/Forward2.png)
+![KeePass Credentials](../assets/Forward2.png)
 
 Recovered credentials:
 
@@ -169,7 +169,7 @@ Password: Helpdesk01!
 ```
 
 
-![BloodHound](assets/Forward3.png)
+![BloodHound](../assets/Forward3.png)
 
 The important permission is:
 

