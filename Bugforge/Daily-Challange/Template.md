@@ -1,27 +1,34 @@
-# Title Page
+# Template
 
-In this lab, there was a "CafeClub" where you could order coffee.
+> **Date:** 16.08.2026  
+> **Author** Chumyx  
+> **Category:** Web Security  
+> **Difficulty:** 2/5  
 
-First, I submitted an order and used Caido to analyze the HTTP traffic.
+---
 
-![](../assets/Pasted%20image%2020260726201014.png)
+<details>
+<summary>Hint from Bugforge</summary>
+<div style="background-color: #dba437; border-left: 5px solid #dd6b20; padding: 10px 14px; border-radius: 4px; margin: 12px 0; color: White">
+<strong>Hint:</strong> Hier steht die Warnung.
+</div>
+</details>
 
-Maybe we can get some loyalty points to pay for our order.
+## 1. Reconaissance
 
-If we go to our profile, we can see that we have the option to edit it.
+Brief description of what the challenge is about and what the goal is.
 
-![](../assets/Pasted%20image%2020260726201126.png)
 
-Now, let's take a look at the requests in Caido/Burp.
+### Initial Enumeration
 
-![](../assets/Pasted%20image%2020260726201333.png)
+I started by creating an account and navigating to my profile.
 
-Let's change the HTTP method from `PUT` to `GET`.
+The profile contained an option to edit my personal information.
 
-![](../assets/Pasted%20image%2020260726201441.png)
+I intercepted the request using **Caido** to inspect how the application handled the submitted data.
 
-Maybe we can try using a `PUT` request to grant ourselves some points.
+![Profile request](./assets/profile-request.png)
 
-![](../assets/Pasted%20image%2020260726201626.png)
+### Request
 
-After sending the request, the flag appears in the response.
+> Note
