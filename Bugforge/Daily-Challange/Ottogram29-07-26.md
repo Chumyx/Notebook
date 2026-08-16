@@ -28,4 +28,4 @@ Referer: https://lab-1785329516224-30tj6a.labs-app.bugforge.io/profile/Chumyx
 If we restart the browser we can see that we have access to admin panel
 
 
-![](../assets/Ottogram29-07-26.png)
+![](../assets/Ottergram26-07-26/Ottogram29-07-26.png)
